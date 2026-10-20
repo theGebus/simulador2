@@ -33,3 +33,9 @@ function recuperaraTexto(idComponente){
         componente.src = rutaImagen;
     
     }
+
+    function agregarCeldaTexto(fila, texto) {
+    let celda = document.createElement("td");
+    celda.innerText = texto;
+    fila.appendChild(celda);
+}
