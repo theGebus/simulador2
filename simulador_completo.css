@@ -125,3 +125,5 @@
       margin-top: 10px;
     }
   
+button:disabled { cursor: not-allowed; opacity: 0.5; }
+.tabla-contenedor { overflow-x: auto; }
