@@ -20,6 +20,7 @@
       Clientes
     </button>
     <button onclick="mostrarSeccion('creditos')">Créditos</button>
+    <button onclick="mostrarSeccion('listaCreditos')">Créditos Registrados</button>
   </nav>
 
   <section class="activa" id="parametros">
@@ -115,9 +116,37 @@
 
   <div id="resultadoCredito" aria-live="polite"></div>
 
-  <button id="btnSolicitarCredito" onclick="solicitarCredito()" disabled>
-    Solicitar crédito
+  <button id="btnAsignarCredito" onclick="asignarCredito()" disabled>
+    Asignar Crédito
   </button>
+</section>
+
+
+<section id="listaCreditos">
+  <h2>Créditos Registrados</h2>
+
+  <label for="buscarCedulaListado">Cédula del cliente:</label>
+  <input type="text" id="buscarCedulaListado">
+  <button onclick="buscarCreditosCliente()">Buscar</button>
+  <button onclick="mostrarTextoEnCaja('buscarCedulaListado', ''); pintarCreditos(creditos)">Ver todos</button>
+
+  <p id="mensajeHistorial" aria-live="polite"></p>
+  <div class="tabla-contenedor">
+  <table>
+    <thead>
+      <tr>
+        <th>Cédula</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Monto</th>
+        <th>Tasa</th>
+        <th>Plazo</th>
+        <th>Cuota</th>
+      </tr>
+    </thead>
+    <tbody id="tablaCreditos"></tbody>
+  </table>
+  </div>
 </section>
 
   <script src="utilitarios.js"></script>
