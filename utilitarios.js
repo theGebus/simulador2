@@ -39,3 +39,10 @@ function recuperaraTexto(idComponente){
     celda.innerText = texto;
     fila.appendChild(celda);
 }
+
+// Mostrar los datos ingresados como texto seguro dentro del HTML dinámico.
+function escaparHTML(texto) {
+  return String(texto).replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;").replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+}
